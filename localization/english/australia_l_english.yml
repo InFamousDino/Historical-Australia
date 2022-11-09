@@ -1,0 +1,29 @@
+﻿l_english:
+ VIC:0 "Victoria"
+ VIC_ADJ:0 "Victorian"
+
+ QLD:0 "Queensland"
+ QLD_ADJ:0 "Queensland"
+
+ australian_events.1.t:0 "Annexation of the Northern Territory"
+ australian_events.1.d:0 "South Australian Annexation of the Northern Territory"
+ australian_events.1.f:0 "Southern Australia has pushed a letters pattent signed by the monarch giving away the Northern Territory to the colony of South Australia."
+ australian_events.1.a:0 "Can't do anything about it."
+
+ australian_events.2.t:0 "Petition for Separation"
+ australian_events.2.d:0 "The First Petition for Separation pushed by Henry Fyshe Gisborne"
+ australian_events.2.f:0 "The first petition for separation has been drafted by Henry Fyshe Gisborne to Governer Gipps who was in favour of seperating Port Phillip District from the colony of New South Wales has rejected the petition."
+ australian_events.2.a:0 "Interesting."
+ australian_events.2.a_tt:0 "This will lead to Port Phillip separation from New South Wales... eventually."
+
+ australian_events.3.t:0 "British Act of Parliament"
+ australian_events.3.d:0 "Separation of Port Phillip District"
+ australian_events.3.f:0 "The British Parliament has seperated the Port Phillip District from the Colony of New South Wales, renaming it to 'Victoria' in which providing the new colony with a constitution. It was signed by Queen Victoria. This act will take place in 1851."
+ australian_events.3.a:0 "We didn't need it anyway."
+
+ australian_events.4.t:0 "Enaction of Victorian Separation"
+ australian_events.4.d:0 "Separation of Victoria from New South Wales"
+ australian_events.4.f:0 "After the act being signed by the Queen, the New South Welsh Legislative Council passed the act not to long after stating that the act will take place in 1851."
+ australian_events.4.a:0 "It'll join back soon."
+
+ australian_events.6.t:0 "A Public Meeting"

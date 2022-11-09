@@ -1,0 +1,292 @@
+namespace = australian_events
+
+# NT transfered to SA
+australian_events.1 = {
+    type = country_event
+
+    title = australian_events.1.t
+	desc = australian_events.1.d
+	flavor = australian_events.1.f
+
+    trigger = {
+        year = 1863
+
+        c:NSW = {
+            country_or_subject_owns_entire_state_region = s:STATE_NORTHERN_TERRITORY
+        }
+    }
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	option = {
+		name = australian_events.1.a
+		s:STATE_NORTHERN_TERRITORY = {
+            random_scope_state = {
+			    set_state_owner = c:SAS
+            }
+		}
+	}
+}
+
+# VIC "independence" line
+
+australian_events.2 = {
+    type = country_event
+
+    title = australian_events.2.t
+    desc = australian_events.2.d
+    flavor = australian_events.2.f
+
+    trigger = {
+        year = 1840
+    }
+
+    event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    option = {
+        name = australian_events.2.a
+        custom_tooltip = australian_events.2.a_tt
+    }
+}
+
+australian_events.3 = {
+    type = country_event
+
+    title = australian_events.3.t
+    desc = australian_events.3.d
+    flavor = australian_events.3.f
+
+    trigger = {
+        current_game_date = 1850.8.1
+        c:VIC = { exists = no }
+    }
+
+    event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    option = {
+        name = australian_events.3.a
+        custom_tooltip = australian_events.3.a.tt
+    }
+}
+
+australian_events.4 = {
+    type = country_event
+
+    title = australian_events.4.t
+    desc = australian_events.4.d
+    flavor = australian_events.4.f
+
+    trigger = {
+        #year = 1851
+        current_game_date = 1851.7.1
+        c:VIC = { exists = no }
+    }
+
+    event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    option = {
+        name = australian_events.4.a
+        
+        create_country = {
+            tag = VIC
+            origin = c:NSW
+
+            state = s:STATE_VICTORIA.region_state:NSW
+
+            on_created = {
+                trigger_event = { id = australian_events.5 }
+            }
+        }
+
+        #hidden_effects = {
+            c:GBR = {
+                create_diplomatic_pact = {
+                    country = c:VIC
+                    type = puppet
+                }
+            }
+        #}
+    }
+}
+
+# No need for this event.
+australian_events.5 = {
+    type = country_event
+
+    title = australian_events.5.t
+    desc = australian_events.5.d
+    flavor = australian_events.5.f
+
+    event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    option = {
+        name = australian_events.5.a
+    }
+}
+
+# QLD "independence" tree
+
+australian_events.6 = {
+    type = country_event
+
+    title = australian_events.6.t
+    desc = australian_events.6.d
+    flavor = australian_events.6.f
+
+    trigger = {
+        year = 1851
+    }
+
+    event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    option = {
+        name = australian_events.6.a
+    }
+}
+
+australian_events.7 = {
+    type = country_event
+
+    title = australian_events.7.t
+    desc = australian_events.7.d
+    flavor = australian_events.7.f
+
+    trigger = {
+        current_game_date = 1859.7.1
+    }
+
+    event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+    option = {
+        name = australian_events.6.a
+
+        trigger_event = { id = australian_events.8 }
+    }
+}
+
+australian_events.8 = {
+    type = country_event
+
+    title = australian_events.8.t
+    desc = australian_events.8.d
+    flavor = australian_events.8.f
+
+    event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    option = {
+        name = australian_events.8.a
+
+        create_country = {
+            tag = QLD
+            origin = c:NSW
+
+            state = s:STATE_QUEENSLAND.region_state:NSW
+        }
+
+        #hidden_effects = {
+            c:GBR = {
+                create_diplomatic_pact = {
+                    country = c:QLD
+                    type = puppet
+                }
+            }
+        #}
+    }
+}
+
+# Tasmania Events
+
+australian_events.9 = {
+    type = country_event
+
+    title = australian_events.8.t
+    desc = australian_events.8.d
+    flavor = australian_events.8.f
+
+    trigger = {
+        year = 1856
+    }
+
+    event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    option = {
+        name = australian_events.8.a
+
+        c:GBR = {
+            create_diplomatic_pact = {
+                country = c:TAS
+                type = puppet
+            }
+        }
+    }
+}
+
+####################################
+### AUSTRALIAN FEDERATION EVENTS ###
+####################################
+
